@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自然风光</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRubik:400,400i,500,700,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-4.2.1.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://www.jq22.com/jquery/font-awesome.4.7.0.css">
+    <link rel="stylesheet" href="css/hover-min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="plugins/indext-icons/style.css">
+    <link rel="stylesheet" href="css/nouislider.css">
+    <link rel="stylesheet" href="css/jquery.bootstrap-touchspin.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style type="text/css">
+        /*地图的样式*/
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: "微软雅黑";
+            font-size: 14px;
+        }
+
+        #l-map {
+            height: 380px;
+            width: 100%;
+        }
+
+        #r-result {
+            width: 100%;
+            margin-top: 30px;
+        }
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
+</head>
+
+<body>
+    <div class="preloader"><span></span></div><!-- /.preloader -->
+    <div class="page-wrapper">
+        <div class="topbar-one">
+            <div class="container">
+                <div class="topbar-one__left">
+                    <div class="topbar-one__social">
+                        <a href="https://www.qq.com/"><i class="fa fa-qq"></i><!-- /.fa fa-facebook-f --></a>
+                        <a href="https://weixin.qq.com/"><i class="fa fa-weixin"></i><!-- /.fa fa-twitter --></a>
+                        <a href="https://weibo.com"><i class="fa fa-weibo"></i><!-- /.fa fa-rss --></a>
+                        <a href="https://www.163.com/rss"><i class="fa fa-rss"></i><!-- /.fa fa-google-plus --></a>
+                        <a href="https://twitter.com/"><i class="fa fa-twitter"></i><!-- /.fa fa-vimeo --></a>
+                    </div><!-- /.topbar-one__social -->
+                </div><!-- /.topbar-one__left -->
+                <div class="topbar-one__right">
+                    <div class="topbar-one__links">
+                        <a href="#" class="topbar-one__search search-popup__toggler"><i class="indext-icon-Search"></i>
+                            <!-- /.indext-icon-Search --></a><!-- /.topbar-one__search -->
+                        <a href="#" class="topbar-one__cart"><i class="indext-icon-Bag"></i>
+                            <!-- /.indext-icon-Bag --></a><!-- /.topbar-one__cart -->
+                        <a href="#" class="topbar-one__link"><i
+                                class="indext-icon-clock"></i><!-- /.indext-icon-clock -->Mon -
+                            Sun: 9.00 - 18.00</a><!-- /.topbar-one__link -->
+                        <a href="#" class="topbar-one__link"><i class="indext-icon-envelope"></i>
+                            <!-- /.indext-icon-envelope -->ncrtxx@163.com </a><!-- /.topbar-one__link -->
+                    </div><!-- /.topbar-one__links -->
+                </div><!-- /.topbar-one__right -->
+            </div><!-- /.container -->
+        </div><!-- /.topbar-one -->
+        <header class="site-header site-header__header-one ">
+            <nav class="navbar navbar-expand-lg navbar-light header-navigation stricky">
+                <div class="container clearfix">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="logo-box">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/resources/full-light-logo.png" width="185" class="main-logo"
+                                alt="Awesome Image" />
+                        </a>
+                        <button class="menu-toggler" data-target=".main-navigation">
+                            <span class="fa fa-bars"></span>
+                        </button>
+                    </div><!-- /.logo-box -->
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="main-navigation">
+                        <ul class=" navigation-box @@extra_class">
+                            <li><a href="index.html">主页</a></li>
+                            <li>
+                                <a href="view.html">自然风光</a>
+                                <ul class="submenu">
+                                    <li><a href="view.html#l-map">地图查询</a></li>
+                                    <li><a href="view.html#hot">自然风光</a></li>
+                                </ul><!-- /.submenu -->
+                                <!-- <ul class="submenu">
+                                    <li><a href="map.html#dituContent">1号线地图</a></li>
+                                    <li><a href="map.html#dituContent1">2号线地图</a></li>
+                                    <li><a href="service.html#time">运营时间查询</a></li>
+                                    <li><a href="service-ticket.html">购票指南</a></li>
+                                    <li><a href="service.html#laf">失物招领</a></li>
+                                    <li><a href="service-notice.html">禁带物品公告</a></li>
+                                </ul> -->
+                            </li>
+                            <li>
+
+                                <a href="service.html">羌文化路</a>
+                            </li>
+                            <li>
+                                <a href="foods.html">民俗美食</a>
+
+                            </li>
+
+                            <li><a href="history.html">宏伟蓝图</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                    <div class="right-side-box">
+                        <a href="contact.html" class="thm-btn site-header__qoute-btn">联系我们 <i
+                                class="fa fa-long-arrow-right"></i>
+                        </a><!-- /.thm-btn -->
+                    </div><!-- /.right-side-box -->
+                </div>
+                <!-- /.container -->
+            </nav>
+        </header><!-- /.site-header -->
+        <section class="inner-banner">
+            <div class="container">
+                <h2 class="inner-banner__title">自然风光</h2><!-- /.inner-banner__title -->
+                <ul class="list-unstyled thm-breadcrumb">
+                    <li><a href="index.html">主页</a></li>
+                    <li class="active"><a href="project-2.html">自然风光</a></li>
+                </ul><!-- /.thm-breadcrumb -->
+            </div><!-- /.container -->
+        </section><!-- /.inner-banner -->
+
+        <!-- 插入地图 -->
+        <div id="l-map"></div>
+
+        <script type="text/javascript">
+            // 百度地图API功能
+            function G(id) {
+                return document.getElementById(id);
+            }
+
+            var map = new BMap.Map("l-map");
+            map.centerAndZoom("成都", 10); // 初始化地图,设置城市和地图级别。
+
+            // 定义一个控件类,即function
+            function ZoomControl() {
+                this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+                this.defaultOffset = new BMap.Size(10, 10);
+            }
+
+            // 通过JavaScript的prototype属性继承于BMap.Control
+            ZoomControl.prototype = new BMap.Control();
+
+            // 自定义控件必须实现自己的initialize方法,并且将控件的DOM元素返回
+            // 在本方法中创建个div元素作为控件的容器,并将其添加到地图容器中
+            ZoomControl.prototype.initialize = function (map) {
+                // 创建一个DOM元素
+                var div = document.createElement("div");
+                div.innerHTML = '<div id="r-result">搜索地址：<input type="text" id="suggestId" size="20" value="百度" style="width:150px;" /></div><div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>';
+
+                // 添加DOM元素到地图中
+                map.getContainer().appendChild(div);
+                // 将DOM元素返回
+                return div;
+            }
+
+            // 创建控件
+            var myZoomCtrl = new ZoomControl();
+            // 添加到地图当中
+            map.addControl(myZoomCtrl);
+
+
+            var ac = new BMap.Autocomplete( //建立一个自动完成的对象
+                {
+                    "input": "suggestId"
+                    , "location": map
+                });
+
+            ac.addEventListener("onhighlight", function (e) { //鼠标放在下拉列表上的事件
+                var str = "";
+                var _value = e.fromitem.value;
+                var value = "";
+                if (e.fromitem.index > -1) {
+                    value = _value.province + _value.city + _value.district + _value.street + _value.business;
+                }
+                str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+
+                value = "";
+                if (e.toitem.index > -1) {
+                    _value = e.toitem.value;
+                    value = _value.province + _value.city + _value.district + _value.street + _value.business;
+                }
+                str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+                G("searchResultPanel").innerHTML = str;
+            });
+
+            var myValue;
+            ac.addEventListener("onconfirm", function (e) { //鼠标点击下拉列表后的事件
+                var _value = e.item.value;
+                myValue = _value.province + _value.city + _value.district + _value.street + _value.business;
+                G("searchResultPanel").innerHTML = "onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+
+                setPlace();
+            });
+
+            function setPlace() {
+                map.clearOverlays(); //清除地图上所有覆盖物
+                function myFun() {
+                    var pp = local.getResults().getPoi(0).point; //获取第一个智能搜索的结果
+                    map.centerAndZoom(pp, 14);
+                    map.addOverlay(new BMap.Marker(pp)); //添加标注
+                }
+                var local = new BMap.LocalSearch(map, { //智能搜索
+                    onSearchComplete: myFun
+                });
+                local.search(myValue);
+            }
+        </script>
+
+        <section class="project-one project-one__home-two project-one__project-page-two">
+            <div class="container">
+                <div class="block-title text-center">
+                    <h3 class="block-title__title" id="hot">茂县自然风光<br>
+                </div><!-- /.block-title -->
+                <ul class="list-unstyled post-filter">
+                    <li class="active" data-filter=".filter-item"><span>全部景观</span></li>
+                    <li data-filter=".Building"><span>人文景观</span></li>
+                    <!--<li data-filter=".Engineering"><span>Engineering</span></li>-->
+                    <li data-filter=".Architechture"><span>自然景观</span></li>
+                </ul><!-- /.list-unstyled -->
+                <div class="row filter-layout">
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item Architechture">
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="images/view/twg.jpg" alt="" height="254">
+                            </div><!-- /.project-one__img -->
+                            <div class="project-one__content">
+                                <a href="#" class="project-one__category">羌在深谷高山</a>
+                                <h2 class="project-one__title"><a href="#">中国古羌城</a></h2>
+                                <!-- /.project-one__title -->
+                            </div><!-- /.project-one__content -->
+                        </div><!-- /.project-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item Building">
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="images/view/81.jpg" alt="">
+                            </div><!-- /.project-one__img -->
+                            <div class="project-one__content">
+                                <a href="#" class="project-one__category">2、泥泞过后是绝美</a>
+                                <h2 class="project-one__title"><a href="#">茂县九顶山</a></h2>
+                                <!-- /.project-one__title -->
+                            </div><!-- /.project-one__content -->
+                        </div><!-- /.project-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item Construction">
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="images/view/qiushui.jpg" alt="" height="254">
+                            </div><!-- /.project-one__img -->
+                            <div class="project-one__content">
+                                <a href="#" class="project-one__category">人少景美、秘境秋色</a>
+                                <h2 class="project-one__title"><a href="#">茂县松坪沟</a></h2>
+                                <!-- /.project-one__title -->
+                            </div><!-- /.project-one__content -->
+                        </div><!-- /.project-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item Construction">
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="images/view/nczx.jpg" alt="" height="254">
+                            </div><!-- /.project-one__img -->
+                            <div class="project-one__content">
+                                <a href="#" class="project-one__category">意境丰富</a>
+                                <h2 class="project-one__title"><a href="#">周边好风景</a></h2>
+                                <!-- /.project-one__title -->
+                            </div><!-- /.project-one__content -->
+                        </div><!-- /.project-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item Building">
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="images/view/jiniang.jpeg" alt="" height="254">
+                            </div><!-- /.project-one__img -->
+                            <div class="project-one__content">
+                                <a href="#" class="project-one__category">意境丰富</a>
+                                <h2 class="project-one__title"><a href="#">周边好风景</a></h2>
+                                <!-- /.project-one__title -->
+                            </div><!-- /.project-one__content -->
+                        </div><!-- /.project-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item Architechture">
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="images/view/sjt.jpeg" alt="" height="254">
+                            </div><!-- /.project-one__img -->
+                            <div class="project-one__content">
+                                <a href="#" class="project-one__category">意境丰富</a>
+                                <h2 class="project-one__title"><a href="#">周边好风景</a></h2>
+                                <!-- /.project-one__title -->
+                            </div><!-- /.project-one__content -->
+                        </div><!-- /.project-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item Architechture">
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="images/view/bowug.jpg" alt="" height="254">
+                            </div><!-- /.project-one__img -->
+                            <div class="project-one__content">
+                                <a href="#" class="project-one__category">美丽与哀愁</a>
+                                <h2 class="project-one__title"><a href="http://www.cntwg.com/">叠溪海子</a></h2>
+                                <!-- /.project-one__title -->
+                            </div><!-- /.project-one__content -->
+                        </div><!-- /.project-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item Construction">
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="images/view/aixihu.jpg" alt="" height="254">
+                            </div><!-- /.project-one__img -->
+                            <div class="project-one__content">
+                                <a href="#" class="project-one__category">天然湿地</a>
+                                <h2 class="project-one__title"><a href="#">艾溪湖森林公园</a></h2>
+                                <!-- /.project-one__title -->
+                            </div><!-- /.project-one__content -->
+                        </div><!-- /.project-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item Construction">
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="images/view/meiling.jpg" alt="" height="254">
+                            </div><!-- /.project-one__img -->
+                            <div class="project-one__content">
+                                <a href="#" class="project-one__category">古羌后花园</a>
+                                <h2 class="project-one__title"><a href="#">九寨沟</a></h2>
+                                <!-- /.project-one__title -->
+                            </div><!-- /.project-one__content -->
+                        </div><!-- /.project-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.project-one project-one__home-two -->
+        <footer class="site-footer">
+            <div class="site-footer__brand">
+                <div class="container">
+                    <div class="site-footer__brand-carousel owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="images/brand/brand-1.jpg" alt="brand image">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="images/brand/brand-2.jpg" alt="brand image">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="images/brand/brand-3.jpg" alt="brand image">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="images/brand/brand-4.jpg" alt="brand image">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="images/brand/brand-5.jpg" alt="brand image">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="images/brand/brand-6.jpg" alt="brand image">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="images/brand/brand-7.jpg" alt="brand image">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="images/brand/brand-8.jpg" alt="brand image">
+                        </div><!-- /.item -->
+                    </div><!-- /.site-footer__brand-carousel -->
+                    <hr class="site-footer__brand-hr">
+                </div><!-- /.container -->
+            </div><!-- /.site-footer__brand -->
+            <div class="site-footer__upper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-5">
+                            <div class="footer-widget footer-widget__about-widget">
+                                <a href="index.html"><img src="images/favicon/1.jpg" width="185"
+                                        class="footer-widget__logo" alt=""></a>
+                                <p class="footer-widget__text">
+                                    小程序介绍:“川羌灵韵”“岷源土特产”是本项目开发的网络主页和微信小程序，为北线羌廊提供旅游服务，同时提供北线周末游线路个性化定制，实现“智慧旅游”</p>
+                                <p class="footer-widget__text">
+                                    阿坝川羌灵韵商贸有限责任公司以四川师范大学学生团队为主力，依托高校的“互联网+”创新创业·乡村振兴平台，在四川师范大学老师的指导下而成立，着力对茂县北部旅游资源进行再开发，设计“茂县北线周末游精品羌廊”旅游产品，策划“川羌灵韵”这个品牌，并用该品牌统一这线路上所有的农产品与旅游产品；同时，协助该线上架产品进行相应的民宿改造、生态采摘园建设策划、摆渡车项目落地、本土研学团队的培训等，以助力茂县乡村振兴与羌文化的传播。
+                                </p><!-- /.footer-widget__text -->
+                                <div class="footer-widget__social">
+                                    <a href="#" class="fa fa-qq"></a>
+                                    <a href="#" class="fa fa-weixin"></a>
+                                    <a href="#" class="fa fa-weibo"></a>
+                                    <a href="#" class="fa fa-rss"></a>
+                                </div><!-- /.footer-widget__social -->
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-lg-6 -->
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="footer-widget footer-widget__links-widget">
+                                <h2 class="footer-widget__title">快速链接</h2><!-- /.footer-widget__title -->
+                                <ul class="footer-widget__links list-unstyled">
+                                    <li><a href="history.html"> 宏伟蓝图</a></li>
+                                    <li><a href="contact.html"> 联系我们</a></li>
+                                    <li><a href="service.html"> 羌文化路</a></li>
+
+                                </ul><!-- /.footer-widget__links -->
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-lg-3 -->
+                        <div class="col-xl-3 col-lg-4">
+                            <div class="footer-widget footer-widget__contact-widget">
+                                <h2 class="footer-widget__title">联系信息</h2><!-- /.footer-widget__title -->
+                                <p class="footer-widget__text">四川省四川师范大学 <br> 龙泉驿区
+                                </p>
+                                <!-- /.footer-widget__text -->
+                                <p class="footer-widget__text">传真：0791-83892008</p><!-- /.footer-widget__text -->
+                                <p class="footer-widget__text">客服热线：0791-96999</p><!-- /.footer-widget__text -->
+
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-lg-3 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.site-footer__upper -->
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="site-footer__copy"><a href="#">Copyright </a> <i class="fa fa-copyright"></i> 2024
+                        四川师范大学创业团队
+                        版权所有</div>
+                    <!-- /.site-footer__copy -->
+                    <ul class="list-unstyled site-footer__links">
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul><!-- /.list-unstyled -->
+                </div><!-- /.container -->
+            </div><!-- /.site-footer__bottom -->
+        </footer><!-- /.site-footer -->
+    </div><!-- /.page-wrapper -->
+    <div class="search-popup">
+        <div class="search-popup__overlay custom-cursor__overlay">
+            <div class="cursor"></div>
+            <div class="cursor-follower"></div>
+        </div><!-- /.search-popup__overlay -->
+        <div class="search-popup__inner">
+            <form action="#" class="search-popup__form">
+                <input type="text" name="search" placeholder="Type here to Search....">
+                <button type="submit"><i class="indext-icon-Search"></i></button>
+            </form>
+        </div><!-- /.search-popup__inner -->
+    </div><!-- /.search-popup -->
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="indext-icon-arrow-up"></i></a>
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <script src="js/nouislider.js"></script>
+    <script src="js/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="js/theme.js"></script>
+
+</body>
+
+</html>
